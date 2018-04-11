@@ -21,7 +21,7 @@ class MyTableViewController: UITableViewController {
     }
 
     
-    // MARK: - Table view data source
+
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -42,6 +42,12 @@ class MyTableViewController: UITableViewController {
         cell.textLabel?.text = treeStr
         
         return cell
+    }
+    
+        // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 
     /*
